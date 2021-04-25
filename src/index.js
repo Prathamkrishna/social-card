@@ -9,6 +9,10 @@ function Whole() {
         width: '100%',
         height: '600px'
     }
+    const seehowtouse = {
+        textDecoration: 'none',
+        color: 'black'
+    }
     return(
         <div>
             <div className="heading">
@@ -16,7 +20,7 @@ function Whole() {
                     SOCIAL CARD
                 </div>
                 <div className="externallinktovid">
-                    SEE HOW TO USE THIS APP
+                    <a href="https://youtu.be/7TG8SRjV14c" target="_blank" rel="noreferrer" style={seehowtouse}>SEE HOW TO USE THIS APP</a>
                 </div>
             </div>
             <br />
