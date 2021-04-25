@@ -1,17 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import landscapephoto from './images/landscapephoto.jpg';
+import App from './app.js';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function Whole() {
+    const imagee = {
+        width: '100%',
+        height: '600px'
+    }
+    return(
+        <div>
+            <div className="heading">
+                <div>
+                    SOCIAL CARD
+                </div>
+                <div className="externallinktovid">
+                    SEE HOW TO USE THIS APP
+                </div>
+            </div>
+            <br />
+            <div>
+                <img alt="landscapephoto" src={landscapephoto} style={imagee}></img>
+                <div className="inImageText">
+                    CREATE YOUR OWN SOCIAL CARD.<br /> SHARE IT WITH YOUR FRIENDS.
+                </div>
+            </div>
+            <br />
+            <div>
+                <div className="templatessection">
+                    CHOOSE FROM ONE OF OUR TEMPLATES
+                </div>
+                <div className="templatesgiven">
+                    <App />
+                </div>
+            </div>
+        </div>
+    )
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<Whole />, document.getElementById('root'))
